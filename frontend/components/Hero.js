@@ -20,10 +20,6 @@ export default function Hero() {
 
   return (
     <section id="home" aria-label="Hero" className="relative bg-white overflow-hidden">
-      {/* Decorative gradient blobs (Google colors) */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-googleBlue/20 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-googleRed/20 blur-3xl" />
-
       <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-10 items-center">
         {/* Left: Bold text */}
         <div className="md:col-span-6">
@@ -52,13 +48,13 @@ export default function Hero() {
               <a href="/resume.pdf" className="px-5 py-2.5 rounded-md bg-googleBlue text-white shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-googleBlue/30">
                 Resume
               </a>
-              <a href="https://github.com/mrityunjay-pandey" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white/70 backdrop-blur hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
+              <a href="https://github.com/mrityunjay-pandey" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
                 GitHub
               </a>
-              <a href="https://www.linkedin.com/in/mrityunjay-pandey-59783a255/" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white/70 backdrop-blur hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
+              <a href="https://www.linkedin.com/in/mrityunjay-pandey-59783a255/" target="_blank" rel="noreferrer" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
                 LinkedIn
               </a>
-              <a href="#contact" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white/70 backdrop-blur hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
+              <a href="#contact" className="px-5 py-2.5 rounded-md border border-gray-200 bg-white hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-googleBlue/20">
                 Contact
               </a>
             </div>
@@ -73,9 +69,9 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
         >
-          <div className="relative w-full aspect-[4/3] rounded-2xl border border-white/60 bg-gradient-to-tr from-googleBlue/10 via-white/50 to-googleRed/10 backdrop-blur shadow-sm overflow-hidden">
+          <div className="relative w-full aspect-[4/3] rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
             <Image
-              src="/images/visual2.png"
+              src="/images/visual3.png"
               alt="Developer visual"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"

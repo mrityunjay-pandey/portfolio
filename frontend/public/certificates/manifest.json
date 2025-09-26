@@ -1,0 +1,217 @@
+[
+  {
+    "title": "Design Thinking Certificates",
+    "file": "design_thinking/design_thinking_certificates.pdf",
+    "category": "design_thinking"
+  },
+  {
+    "title": "Dsa 1 Using Python",
+    "file": "infosys_certificates/dsa-1-using-python.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Dsa 2 Using Python",
+    "file": "infosys_certificates/dsa-2-using-python.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Dsa Using Java",
+    "file": "infosys_certificates/dsa_using_java.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Machine Learning Using Python",
+    "file": "infosys_certificates/machine_learning_using_python.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Next Gen Tech",
+    "file": "infosys_certificates/next_gen_tech.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Oop Using Python",
+    "file": "infosys_certificates/oop_using_python.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Programming Fundamentals Using Python",
+    "file": "infosys_certificates/programming_fundamentals_using_python.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Programming In C",
+    "file": "infosys_certificates/programming_in_c.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Scrum In Practice",
+    "file": "infosys_certificates/scrum_in_practice.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Twitter Bootstrap",
+    "file": "infosys_certificates/twitter_bootstrap.pdf",
+    "category": "infosys_certificates"
+  },
+  {
+    "title": "Analyze Video",
+    "file": "microsoft_azure/Analyze video.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Analyze Images",
+    "file": "microsoft_azure/analyze_images.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Analyze Text With Azure Ai Language",
+    "file": "microsoft_azure/analyze_text_with_azure_ai_language.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Build An Azure AI Document Intelligence Custom Skill For Azure Cognitive Search",
+    "file": "microsoft_azure/Build an Azure AI Document Intelligence custom skill for Azure Cognitive Search.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Build A Conversational Language Understanding Model",
+    "file": "microsoft_azure/build_a_conversational_language_understanding_model.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Build A Question Answering Solution",
+    "file": "microsoft_azure/build_a_question_answering_solution.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Classify Images",
+    "file": "microsoft_azure/classify_images.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Create A Composed Form Recognizer Model",
+    "file": "microsoft_azure/Create a composed Form Recognizer model.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Create A Custom Named Entity Extraction Solution",
+    "file": "microsoft_azure/create_a_custom_named_entity_extraction_solution.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Create A Custom Text Classification Solution",
+    "file": "microsoft_azure/create_a_custom_text_classification_solution.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Create Speech Enabled Apps With Azure Ai Services",
+    "file": "microsoft_azure/create_speech_enabled_apps_with_azure_ai_services.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Custom Named Entity Recognition",
+    "file": "microsoft_azure/custom_named_entity_recognition.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Detect Analyze And Recognize Faces",
+    "file": "microsoft_azure/detect_analyze_and_recognize_faces.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Detect Objects In Images",
+    "file": "microsoft_azure/detect_objects_in_images.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Extract Data From Forms With Azure Document Intelligence",
+    "file": "microsoft_azure/Extract data from forms with Azure Document Intelligence.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Extract Insights From Text With The Azure Ai Language Service",
+    "file": "microsoft_azure/extract_insights_from_text_with_the_azure_ai_language_service.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Plan An Azure AI Document Intelligence Solution",
+    "file": "microsoft_azure/Plan an Azure AI Document Intelligence solution.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Read Text In Images And Documents With The Azure AI Vision Service",
+    "file": "microsoft_azure/Read Text in images and documents with the Azure AI Vision Service.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Translate Text With Azure Ai Translator Service",
+    "file": "microsoft_azure/translate_text_with_azure_ai_translator_service.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Use Prebuilt Azure AI Document Intelligence Models",
+    "file": "microsoft_azure/Use prebuilt Azure AI Document Intelligence models.pdf",
+    "category": "microsoft_azure"
+  },
+  {
+    "title": "Connecting To A MongoDB Database",
+    "file": "mongodb/Connecting to a MongoDB Database.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "Getting Started With MongoDB Atles",
+    "file": "mongodb/Getting Started with MongoDB Atles.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "Introduction To MongoDB",
+    "file": "mongodb/Introduction to MongoDB.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Aggregation",
+    "file": "mongodb/MongoDB Aggregation.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB And The Document Model",
+    "file": "mongodb/MongoDB and the Document Model.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Atles Search",
+    "file": "mongodb/MongoDB Atles Search.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB CRUD Operations Modifying Query Results",
+    "file": "mongodb/MongoDB CRUD Operations Modifying Query Results.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB CRUD Operations Replace And Delete Documents",
+    "file": "mongodb/MongoDB CRUD Operations Replace and Delete Documents.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Crud Operations",
+    "file": "mongodb/MongoDB crud operations.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Data Modeling Intro",
+    "file": "mongodb/MongoDB Data Modeling Intro.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Indexes",
+    "file": "mongodb/MongoDB Indexes.pdf",
+    "category": "mongodb"
+  },
+  {
+    "title": "MongoDB Transactions",
+    "file": "mongodb/MongoDB Transactions.pdf",
+    "category": "mongodb"
+  }
+]
