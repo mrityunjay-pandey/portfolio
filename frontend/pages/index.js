@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import AboutMe from '../components/AboutMe';
 import Skills from '../components/Skills';
 import ProjectsGrid from '../components/ProjectsGrid';
+import ProjectTimeline from '../components/Projects/ProjectTimeline';
+import DBMSProjectsSuite from '../components/Projects/DBMSProjectsSuite';
 import ReusabilityShowcase from '../components/Projects/ReusabilityShowcase';
 import TestimonialsCarousel from '../components/Projects/TestimonialsCarousel';
 import AchievementsExperience from '../components/AchievementsExperience';
@@ -17,12 +19,9 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <Skills />
-      <section id="projects" className="bg-white">
-        <div className="max-w-5xl mx-auto px-4 py-16">
-          <h2 className="text-2xl font-semibold">Projects</h2>
-        </div>
-      </section>
       <ProjectsGrid />
+      <ProjectTimeline />
+      <DBMSProjectsSuite />
       <ReusabilityShowcase />
       <TestimonialsCarousel />
       <AchievementsExperience />
@@ -32,4 +31,5 @@ export default function Home() {
     </div>
   );
 }
+
 

@@ -12,13 +12,17 @@ export default function TestimonialsCarousel() {
   function prev() { setIdx((idx - 1 + testimonials.length) % testimonials.length); }
   const t = testimonials[idx];
   return (
-    <div className="mt-8 border border-gray-100 rounded p-4 bg-white">
-      <div className="text-gray-800">“{t.quote}”</div>
-      <div className="mt-1 text-sm text-gray-600">— {t.author}</div>
-      <div className="mt-3 flex gap-2">
-        <button onClick={prev} className="px-3 py-1.5 text-sm rounded border border-gray-200 hover:border-gray-300">Prev</button>
-        <button onClick={next} className="px-3 py-1.5 text-sm rounded bg-googleBlue text-white hover:opacity-90">Next</button>
+    <section className="bg-white">
+      <div className="max-w-5xl mx-auto px-4 py-16">
+        <div className="rounded-lg border border-gray-100 p-4 bg-white">
+          <div className="text-gray-800">“{t.quote}”</div>
+          <div className="mt-1 text-sm text-gray-600">— {t.author}</div>
+          <div className="mt-3 flex gap-2">
+            <button onClick={prev} className="px-3 py-1.5 text-sm rounded border border-gray-200 hover:border-gray-300">Prev</button>
+            <button onClick={next} className="px-3 py-1.5 text-sm rounded bg-googleBlue text-white hover:opacity-90">Next</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

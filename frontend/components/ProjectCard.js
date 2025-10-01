@@ -1,5 +1,19 @@
 import { useRef, useState, useEffect } from 'react';
 
+function gradientFromTitle(title = '') {
+  const colors = [
+    ['from-googleBlue', 'to-googleGreen'],
+    ['from-googleRed', 'to-googleYellow'],
+    ['from-indigo-500', 'to-sky-400'],
+    ['from-fuchsia-500', 'to-pink-500'],
+    ['from-emerald-500', 'to-lime-400'],
+  ];
+  let hash = 0;
+  for (let i = 0; i < title.length; i++) hash = (hash * 31 + title.charCodeAt(i)) >>> 0;
+  const pair = colors[hash % colors.length];
+  return `bg-gradient-to-br ${pair[0]} ${pair[1]}`;
+}
+
 export default function ProjectCard({ project }) {
   const { title, description, techStack = [], githubUrl, liveUrl, thumbnailUrl } = project;
 
@@ -41,7 +55,7 @@ export default function ProjectCard({ project }) {
         style={style}
         className="group rounded-[15px] overflow-hidden bg-white/70 backdrop-blur-sm border border-white/60 shadow-sm hover:shadow-lg transition-[box-shadow,transform] will-change-transform"
       >
-        <div className="relative aspect-video bg-gray-50 overflow-hidden">
+        <div className="relative aspect-video overflow-hidden">
           {thumbnailUrl ? (
             <img
               src={thumbnailUrl}
@@ -50,7 +64,12 @@ export default function ProjectCard({ project }) {
               loading="lazy"
             />
           ) : (
-            <div className="w-full h-full grid place-items-center text-gray-400 text-sm">No thumbnail</div>
+            <div className={`w-full h-full ${gradientFromTitle(title)} grid place-items-center text-white`}>
+              <div className="text-center">
+                <div className="text-2xl font-semibold drop-shadow-sm">{title?.[0] || 'P'}</div>
+                <div className="text-xs opacity-90">Add a thumbnail for richer preview</div>
+              </div>
+            </div>
           )}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         </div>
