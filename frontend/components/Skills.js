@@ -97,7 +97,7 @@ function SkillBadge({ name, brand, generic }) {
 export default function Skills() {
   return (
     <section id="skills" aria-label="Skills" className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold">Skills</h2>
 
         {/* Technical Skills */}

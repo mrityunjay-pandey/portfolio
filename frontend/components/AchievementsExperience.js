@@ -12,7 +12,7 @@ export default function AchievementsExperience() {
   ];
   return (
     <section id="achievements" aria-label="Achievements & Experience" className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold">Achievements & Experience</h2>
         <ul className="mt-4 space-y-2 text-gray-700">
           {items.map((txt, i) => (

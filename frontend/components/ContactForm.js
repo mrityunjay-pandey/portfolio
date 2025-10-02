@@ -54,7 +54,7 @@ export default function ContactForm() {
 
   return (
     <section id="contact" aria-label="Contact" className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold">Contact</h2>
         <form onSubmit={handleSubmit} className="mt-6 max-w-2xl space-y-4" noValidate>
           <div>

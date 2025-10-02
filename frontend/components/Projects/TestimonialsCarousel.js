@@ -12,8 +12,8 @@ export default function TestimonialsCarousel() {
   function prev() { setIdx((idx - 1 + testimonials.length) % testimonials.length); }
   const t = testimonials[idx];
   return (
-    <section className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <section className="bg-white border-t border-gray-100">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div className="rounded-lg border border-gray-100 p-4 bg-white">
           <div className="text-gray-800">“{t.quote}”</div>
           <div className="mt-1 text-sm text-gray-600">— {t.author}</div>

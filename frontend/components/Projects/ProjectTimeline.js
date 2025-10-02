@@ -90,8 +90,8 @@ const phases = [
 
 export default function ProjectTimeline() {
   return (
-    <section className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <section className="bg-white border-t border-gray-100">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold mb-2">Project Journey</h2>
         <p className="text-gray-600 mb-8">From foundations to product-oriented development, showcasing continuous growth and real-world impact</p>
         
@@ -155,4 +155,5 @@ export default function ProjectTimeline() {
     </section>
   );
 }
+
 

@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section id="home" aria-label="Hero" className="relative bg-white overflow-hidden">
-      <div className="relative max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-10 items-center">
+      <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-center">
         {/* Left: Bold text */}
         <div className="md:col-span-6">
           <motion.div

@@ -4,8 +4,8 @@ export default function ReusabilityShowcase() {
     { title: 'DBMS Modules', desc: 'Reusable schemas and CRUD patterns across Bank/Hotel/E-commerce' },
   ];
   return (
-    <section className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <section className="bg-white border-t border-gray-100">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h3 className="font-medium text-xl">Reusability & Scalability</h3>
         <ul className="mt-3 text-sm text-gray-700 space-y-1">
           {items.map((i) => (

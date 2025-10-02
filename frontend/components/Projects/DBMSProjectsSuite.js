@@ -72,8 +72,8 @@ const ecommerceProjects = [
 
 export default function DBMSProjectsSuite() {
   return (
-    <section className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <section className="bg-white border-t border-gray-100">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -222,4 +222,5 @@ export default function DBMSProjectsSuite() {
     </section>
   );
 }
+
 

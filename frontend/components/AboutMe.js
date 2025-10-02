@@ -14,7 +14,7 @@ export default function AboutMe() {
 
   return (
     <section id="about" aria-label="About Me" className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16 grid md:grid-cols-12 gap-8 items-stretch">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20 grid md:grid-cols-12 gap-10 items-stretch">
         <div className="md:col-span-4 h-full">
           <div className="w-full h-full rounded-lg overflow-hidden bg-gray-100">
             <Image src="/images/profile1.jpg" alt="Profile" width={1200} height={1200} className="w-full h-full object-cover" />

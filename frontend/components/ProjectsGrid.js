@@ -25,8 +25,8 @@ export default function ProjectsGrid() {
   }, []);
 
   return (
-    <section id="projects" aria-label="Projects" className="bg-white">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <section aria-label="Projects" className="bg-white">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold">Projects</h2>
         {loading && <p className="mt-4 text-gray-600">Loading projects…</p>}
         {error && !loading && (
