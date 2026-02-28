@@ -8,6 +8,7 @@ import DBMSProjectsSuite from '../components/Projects/DBMSProjectsSuite';
 import ReusabilityShowcase from '../components/Projects/ReusabilityShowcase';
 import TestimonialsCarousel from '../components/Projects/TestimonialsCarousel';
 import AchievementsExperience from '../components/AchievementsExperience';
+import YouTubePlaylists from '../components/YouTubePlaylists';
 import EntrepreneurshipVision from '../components/EntrepreneurshipVision';
 import CertificatesGallery from '../components/CertificatesGallery';
 import ContactForm from '../components/ContactForm';
@@ -25,6 +26,7 @@ export default function Home() {
       <ReusabilityShowcase />
       <TestimonialsCarousel />
       <AchievementsExperience />
+      <YouTubePlaylists />
       <CertificatesGallery />
       <EntrepreneurshipVision />
       <ContactForm />

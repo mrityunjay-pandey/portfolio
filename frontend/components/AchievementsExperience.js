@@ -10,6 +10,7 @@ export default function AchievementsExperience() {
     'Hackathons, coding contests',
     'Teaching + YouTube playlists (DSA, Python, Digital Logic)'
   ];
+
   return (
     <section id="achievements" aria-label="Achievements & Experience" className="bg-white">
       <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">

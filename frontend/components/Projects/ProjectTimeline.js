@@ -16,6 +16,7 @@ const phases = [
         name: 'NewsMonkey',
         description: 'Developed a news aggregation app with category filtering and responsive design, showcasing API integration skills.',
         tech: ['React', 'News API', 'Bootstrap'],
+        link: 'https://newsmonkey-git-master-mrityunjay-pandeys-projects-3e3008d2.vercel.app/',
         impact: 'Learned API consumption and state management patterns'
       }
     ]
@@ -70,12 +71,14 @@ const phases = [
         name: 'PathPradarshak',
         description: 'Founded a mentorship platform providing career guidance and study materials to 500+ students, with modular architecture reused in CivicSync.',
         tech: ['Next.js', 'MongoDB', 'Modular Architecture'],
+        link: 'https://pathpradarshak.in/',
         impact: 'Scaled mentorship program helping 500+ students with career guidance'
       },
       {
         name: 'CivicSync',
         description: 'Developed an AI-powered civic engagement platform for hackathon enabling real-time issue reporting and community problem-solving.',
         tech: ['React', 'Flask', 'AI Integration', 'Real-time Updates'],
+        link: 'https://deploy-three-lac.vercel.app/',
         impact: 'Built civic tech solution for community engagement and issue resolution'
       },
       {
