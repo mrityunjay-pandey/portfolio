@@ -3,6 +3,11 @@ import { useEffect, useState, useMemo } from 'react';
 export default function CertificatesGallery() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [expandedCats, setExpandedCats] = useState({});
+
+  const toggleCat = (cat) => {
+    setExpandedCats(prev => ({ ...prev, [cat]: !prev[cat] }));
+  };
 
   useEffect(() => {
     async function load() {
@@ -46,23 +51,38 @@ export default function CertificatesGallery() {
         )}
         {!loading && groups.length > 0 && (
           <div className="mt-6 space-y-10">
-            {groups.map(([cat, list]) => (
-              <div key={cat}>
-                <h3 className="text-lg font-semibold text-gray-900">{cat}</h3>
-                <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {list.map((c, idx) => (
-                    <div key={`${c.file}-${idx}`} className="rounded-lg border border-gray-100 p-4 bg-white">
-                      <div className="font-medium text-gray-900 line-clamp-2">{c.title || c.file}</div>
-                      <div className="mt-2 text-sm text-gray-600 break-all">/certificates/{c.file}</div>
-                      <div className="mt-4 flex gap-2">
-                        <a href={`/certificates/${c.file}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 text-sm rounded bg-googleBlue text-white hover:opacity-90">View</a>
-                        <a href={`/certificates/${c.file}`} download className="px-3 py-1.5 text-sm rounded border border-gray-200 hover:border-gray-300">Download</a>
+            {groups.map(([cat, list]) => {
+              const isExpanded = expandedCats[cat];
+              const visibleList = isExpanded ? list : list.slice(0, 3);
+              
+              return (
+                <div key={cat}>
+                  <h3 className="text-lg font-semibold text-gray-900 border-l-4 border-googleGreen pl-4">{cat}</h3>
+                  <div className="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {visibleList.map((c, idx) => (
+                      <div key={`${c.file}-${idx}`} className="rounded-xl border border-gray-200 p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div className="font-medium text-gray-900 line-clamp-2">{c.title || c.file}</div>
+                        <div className="mt-4 flex gap-2">
+                          <a href={`/certificates/${c.file}`} target="_blank" rel="noreferrer" className="px-3 py-1.5 text-sm rounded bg-googleBlue text-white hover:opacity-90 transition-opacity">View</a>
+                          <a href={`/certificates/${c.file}`} download className="px-3 py-1.5 text-sm rounded border border-gray-200 hover:border-gray-300 text-gray-700 transition-colors">Download</a>
+                        </div>
                       </div>
+                    ))}
+                  </div>
+                  
+                  {list.length > 3 && (
+                    <div className="mt-4 text-center sm:text-left">
+                      <button
+                        onClick={() => toggleCat(cat)}
+                        className="text-sm font-medium text-googleBlue hover:text-googleBlue/80 hover:underline focus:outline-none"
+                      >
+                        {isExpanded ? 'View Less' : `View All ${list.length} Certificates`}
+                      </button>
                     </div>
-                  ))}
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

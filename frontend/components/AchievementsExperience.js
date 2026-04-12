@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function AchievementsExperience() {
   const items = [
+    'GATE-2026 Qualified',
     'JEE cleared via online prep (Fee Waiver seat)',
     '9 CGPA while teaching and building projects',
     '500+ students helped with live DSA assignment solutions',

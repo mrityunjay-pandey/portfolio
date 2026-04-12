@@ -11,7 +11,7 @@ export default function Hero() {
       const params = new URLSearchParams(window.location.search);
       const c = params.get('company');
       if (c) setCompany(c);
-    } catch (_) {}
+    } catch (_) { }
   }, []);
 
   const welcomeText = company

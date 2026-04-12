@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -7,11 +9,13 @@ const sections = [
   { id: 'projects', label: 'Projects' },
   { id: 'achievements', label: 'Achievements' },
   { id: 'playlists', label: 'Playlists' },
+  { id: 'highlights', label: 'Highlights', href: '/highlights' },
   { id: 'entrepreneurship', label: 'Entrepreneurship' },
   { id: 'contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
+  const router = useRouter();
   const [activeId, setActiveId] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -44,18 +48,22 @@ export default function Navbar() {
         <a href="#home" className="font-semibold focus:outline-none focus:ring-2 focus:ring-googleBlue/30 rounded">Mrityunjay Pandey</a>
         <ul className="flex items-center gap-4 text-sm">
           {sections.map((s) => {
-            const href = `#${s.id}`;
-            const isActive = activeId === s.id;
+            let href = s.href || `/#${s.id}`;
+            if (!s.href && router.pathname === '/') {
+              href = `#${s.id}`;
+            }
+            
+            const isActive = activeId === s.id || (s.id === 'highlights' && router.pathname === '/highlights');
             return (
               <li key={s.id} className="relative group">
-                <a
+                <Link
                   href={href}
-                  className={`px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-googleBlue/30 transition-colors ${
+                  className={`px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-googleBlue/30 transition-colors block ${
                     isActive ? 'text-googleBlue font-medium' : 'text-gray-700 hover:text-googleBlue'
                   }`}
                 >
                   {s.label}
-                </a>
+                </Link>
                 <span
                   aria-hidden="true"
                   className={`pointer-events-none absolute left-1/2 -bottom-0.5 h-0.5 w-6 -translate-x-1/2 rounded-full bg-googleBlue transition-transform duration-200 ${

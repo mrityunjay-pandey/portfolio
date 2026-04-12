@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const dbmsProjects = [
   {
-    name: 'Bank Management System',
-    date: 'Apr 10, 2025',
-    description: 'Complete banking solution with account management, transactions, loan processing, and customer portal.',
+    name: 'Restaurant Management System',
+    date: 'Apr 12, 2025',
+    description: 'Food service management platform with menu management, order processing, and billing.',
     tech: ['Java', 'MySQL', 'Swing GUI', 'JDBC'],
-    features: ['Account Creation', 'Transaction Processing', 'Loan Management', 'Customer Dashboard'],
-    impact: 'Used by 20+ students for semester projects'
+    features: ['Menu Management', 'Order Processing', 'Table Management', 'Billing System'],
+    impact: 'Enhanced restaurant operational efficiency'
   },
   {
     name: 'Hotel Management System',
@@ -16,14 +17,6 @@ const dbmsProjects = [
     tech: ['Java', 'MySQL', 'Swing GUI', 'JDBC'],
     features: ['Room Booking', 'Guest Management', 'Billing System', 'Inventory Tracking'],
     impact: 'Demonstrated complex relational database design'
-  },
-  {
-    name: 'Car Rental System',
-    date: 'Apr 10, 2025',
-    description: 'Vehicle rental management system with booking, payment processing, and fleet tracking.',
-    tech: ['Java', 'MySQL', 'Swing GUI', 'JDBC'],
-    features: ['Vehicle Booking', 'Payment Integration', 'Fleet Management', 'Customer Portal'],
-    impact: 'Showcased real-world business logic implementation'
   },
   {
     name: 'Library Management System',
@@ -42,12 +35,20 @@ const dbmsProjects = [
     impact: 'Streamlined academic record keeping'
   },
   {
-    name: 'Restaurant Management System',
-    date: 'Apr 12, 2025',
-    description: 'Food service management platform with menu management, order processing, and billing.',
+    name: 'Bank Management System',
+    date: 'Apr 10, 2025',
+    description: 'Complete banking solution with account management, transactions, loan processing, and customer portal.',
     tech: ['Java', 'MySQL', 'Swing GUI', 'JDBC'],
-    features: ['Menu Management', 'Order Processing', 'Table Management', 'Billing System'],
-    impact: 'Enhanced restaurant operational efficiency'
+    features: ['Account Creation', 'Transaction Processing', 'Loan Management', 'Customer Dashboard'],
+    impact: 'Used by 20+ students for semester projects'
+  },
+  {
+    name: 'Car Rental System',
+    date: 'Apr 10, 2025',
+    description: 'Vehicle rental management system with booking, payment processing, and fleet tracking.',
+    tech: ['Java', 'MySQL', 'Swing GUI', 'JDBC'],
+    features: ['Vehicle Booking', 'Payment Integration', 'Fleet Management', 'Customer Portal'],
+    impact: 'Showcased real-world business logic implementation'
   },
   {
     name: 'E-commerce Catalogue Management',
@@ -71,6 +72,9 @@ const ecommerceProjects = [
 ];
 
 export default function DBMSProjectsSuite() {
+  const [showAllDBMS, setShowAllDBMS] = useState(false);
+  const visibleDBMS = showAllDBMS ? dbmsProjects : dbmsProjects.slice(0, 3);
+
   return (
     <section className="bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
@@ -93,14 +97,14 @@ export default function DBMSProjectsSuite() {
         >
           <h3 className="text-xl font-semibold text-gray-900 mb-6 border-l-4 border-googleBlue pl-4">Database Management Systems</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dbmsProjects.map((project, index) => (
+            {visibleDBMS.map((project, index) => (
               <motion.div
                 key={project.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg p-6 border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
                   <h4 className="text-lg font-semibold text-gray-900">{project.name}</h4>
@@ -137,6 +141,17 @@ export default function DBMSProjectsSuite() {
               </motion.div>
             ))}
           </div>
+          
+          {dbmsProjects.length > 3 && (
+            <div className="mt-6 flex justify-center">
+              <button
+                onClick={() => setShowAllDBMS(!showAllDBMS)}
+                className="px-6 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 font-medium hover:border-googleBlue/50 hover:text-googleBlue hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-googleBlue/30"
+              >
+                {showAllDBMS ? 'Show Less' : 'Show All DBMS Projects'}
+              </button>
+            </div>
+          )}
         </motion.div>
 
         {/* E-commerce Projects */}
@@ -155,7 +170,7 @@ export default function DBMSProjectsSuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg p-6 border border-gray-100 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:bg-gray-50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
                   <h4 className="text-lg font-semibold text-gray-900">{project.name}</h4>
@@ -196,7 +211,7 @@ export default function DBMSProjectsSuite() {
 
         {/* Summary Stats */}
         <motion.div
-          className="mt-12 bg-gradient-to-r from-googleBlue/5 to-googleGreen/5 rounded-lg p-8"
+          className="mt-12 bg-white rounded-xl p-8 border border-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

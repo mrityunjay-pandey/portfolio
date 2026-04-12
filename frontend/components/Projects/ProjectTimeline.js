@@ -1,41 +1,24 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const phases = [
   {
-    title: 'Foundations (Aug 2023)',
-    description: 'Initial web development journey with React fundamentals',
+    title: 'Product-Oriented Development (May-Sep 2025)',
+    description: 'Focus on scalable products and real-world impact',
     projects: [
       {
-        name: 'TextUtils',
-        description: 'Built a React text utility app with real-time character counting and formatting features, deployed on GitHub Pages for public access.',
-        tech: ['React', 'JavaScript', 'CSS'],
-        link: 'https://mrityunjay-pandey.github.io/TextUtils/',
-        impact: 'First deployed React application demonstrating component-based architecture'
+        name: 'PathPradarshak',
+        description: 'Founded a mentorship platform providing career guidance and study materials to 500+ students, with modular architecture reused in CivicSync.',
+        tech: ['Next.js', 'MongoDB', 'Modular Architecture'],
+        link: 'https://pathpradarshak.in/',
+        impact: 'Scaled mentorship program helping 500+ students with career guidance'
       },
       {
-        name: 'NewsMonkey',
-        description: 'Developed a news aggregation app with category filtering and responsive design, showcasing API integration skills.',
-        tech: ['React', 'News API', 'Bootstrap'],
-        link: 'https://newsmonkey-git-master-mrityunjay-pandeys-projects-3e3008d2.vercel.app/',
-        impact: 'Learned API consumption and state management patterns'
-      }
-    ]
-  },
-  {
-    title: 'Python Mastery (2023-2024)',
-    description: 'Deep dive into Python programming and system design',
-    projects: [
-      {
-        name: 'Advanced Python Certification',
-        description: 'Completed comprehensive Python course covering OOP, data structures, algorithms, and advanced programming concepts.',
-        tech: ['Python', 'OOP', 'Data Structures'],
-        impact: 'Mastered core programming fundamentals and problem-solving approaches'
-      },
-      {
-        name: 'University Management System',
-        description: 'Built a complete university management system using Java with student, faculty, and course management modules.',
-        tech: ['Java', 'OOP', 'Database Design'],
-        impact: 'Demonstrated system design skills and complex data modeling'
+        name: 'CivicSync',
+        description: 'Developed an AI-powered civic engagement platform for hackathon enabling real-time issue reporting and community problem-solving.',
+        tech: ['React', 'Flask', 'AI Integration', 'Real-time Updates'],
+        link: 'https://deploy-three-lac.vercel.app/',
+        impact: 'Built civic tech solution for community engagement and issue resolution'
       }
     ]
   },
@@ -64,42 +47,57 @@ const phases = [
     ]
   },
   {
-    title: 'Product-Oriented Development (May-Sep 2025)',
-    description: 'Focus on scalable products and real-world impact',
+    title: 'Python Mastery (2023-2024)',
+    description: 'Deep dive into Python programming and system design',
     projects: [
       {
-        name: 'PathPradarshak',
-        description: 'Founded a mentorship platform providing career guidance and study materials to 500+ students, with modular architecture reused in CivicSync.',
-        tech: ['Next.js', 'MongoDB', 'Modular Architecture'],
-        link: 'https://pathpradarshak.in/',
-        impact: 'Scaled mentorship program helping 500+ students with career guidance'
+        name: 'Advanced Python Certification',
+        description: 'Completed comprehensive Python course covering OOP, data structures, algorithms, and advanced programming concepts.',
+        tech: ['Python', 'OOP', 'Data Structures'],
+        impact: 'Mastered core programming fundamentals and problem-solving approaches'
       },
       {
-        name: 'CivicSync',
-        description: 'Developed an AI-powered civic engagement platform for hackathon enabling real-time issue reporting and community problem-solving.',
-        tech: ['React', 'Flask', 'AI Integration', 'Real-time Updates'],
-        link: 'https://deploy-three-lac.vercel.app/',
-        impact: 'Built civic tech solution for community engagement and issue resolution'
+        name: 'University Management System',
+        description: 'Built a complete university management system using Java with student, faculty, and course management modules.',
+        tech: ['Java', 'OOP', 'Database Design'],
+        impact: 'Demonstrated system design skills and complex data modeling'
+      }
+    ]
+  },
+  {
+    title: 'Foundations (Aug 2023)',
+    description: 'Initial web development journey with React fundamentals',
+    projects: [
+      {
+        name: 'TextUtils',
+        description: 'Built a React text utility app with real-time character counting and formatting features, deployed on GitHub Pages for public access.',
+        tech: ['React', 'JavaScript', 'CSS'],
+        link: 'https://mrityunjay-pandey.github.io/TextUtils/',
+        impact: 'First deployed React application demonstrating component-based architecture'
       },
       {
-        name: 'Career Path Finder',
-        description: 'Created an intelligent career guidance system using logic-driven UI to suggest career paths based on user skills and interests.',
-        tech: ['React', 'Algorithm Design', 'User Experience'],
-        impact: 'Helped students make informed career decisions through data-driven recommendations'
+        name: 'NewsMonkey',
+        description: 'Developed a news aggregation app with category filtering and responsive design, showcasing API integration skills.',
+        tech: ['React', 'News API', 'Bootstrap'],
+        link: 'https://newsmonkey-git-master-mrityunjay-pandeys-projects-3e3008d2.vercel.app/',
+        impact: 'Learned API consumption and state management patterns'
       }
     ]
   }
 ];
 
 export default function ProjectTimeline() {
+  const [showAll, setShowAll] = useState(false);
+  const visiblePhases = showAll ? phases : phases.slice(0, 2);
+
   return (
     <section className="bg-white border-t border-gray-100">
       <div className="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <h2 className="text-2xl font-semibold mb-2">Project Journey</h2>
         <p className="text-gray-600 mb-8">From foundations to product-oriented development, showcasing continuous growth and real-world impact</p>
         
-        <div className="space-y-12">
-          {phases.map((phase, phaseIndex) => (
+        <div className="space-y-12 mb-8">
+          {visiblePhases.map((phase, phaseIndex) => (
             <motion.div
               key={phase.title}
               initial={{ opacity: 0, y: 20 }}
@@ -119,7 +117,7 @@ export default function ProjectTimeline() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: (phaseIndex * 0.1) + (projectIndex * 0.05) }}
-                      className="bg-gray-50 rounded-lg p-6 border border-gray-100"
+                      className="bg-white rounded-xl p-6 border border-gray-200"
                     >
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
@@ -154,6 +152,17 @@ export default function ProjectTimeline() {
             </motion.div>
           ))}
         </div>
+        
+        {phases.length > 2 && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 font-medium hover:border-googleBlue/50 hover:text-googleBlue hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-googleBlue/30"
+            >
+              {showAll ? 'Show Less' : 'Show More Journey'}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
